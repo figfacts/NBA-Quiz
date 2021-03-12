@@ -1,137 +1,241 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+:root {
+    background-color: rgb(29, 26, 26)
 }
 
-html,
-body,
-.wrapper {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    font-family: 'Nova Square', cursive;
 }
 
-body {
-  font-family: sans-serif;
-  background-color: #f9fbfd;
+h1 {
+    font-size: 5.4rem;
+    color: #fff;
+    margin-bottom: 5rem;
 }
 
-.wrapper {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
+
+
+h2 {
+    font-size: 4.2rem;
+    margin-bottom: 4rem;
+
 }
 
-header {
-  text-align: center;
-  padding: 20px;
-  padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+p1 {
+    font-size: 2.4rem;
+    color: #fff;
+    margin-bottom: 4rem;
+
 }
 
-.card {
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 5px;
-  border-width: 1px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-  color: hsl(206, 17%, 28%);
-  font-size: 18px;
-  margin: 0 auto;
-  max-width: 800px;
-  padding: 30px 40px;
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-.card-header::after {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
+.flex-column {
+    display: flex;
+    flex-direction: column;
 }
 
-.card-body {
-  min-height: 100px;
+.flex-center {
+    justify-content: center;
+    align-items: center;
 }
 
-.card-footer {
-  text-align: center;
+.justify-center {
+    justify-content: center;
 }
 
-.card-footer::before {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
+.text-center {
+    text-align: center;
 }
 
-.card-footer::after {
-  content: " ";
-  display: block;
-  clear: both;
+.hidden {
+    display: none;
 }
 
 .btn {
-  border: none;
-  background-color:blue;
-  border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
-  color: hsl(0, 0%, 0%);
-  display: inline-block;
-  font-size: 22px;
-  line-height: 22px;
-  margin: 16px 16px 16px 20px;
-  padding: 14px 34px;
-  text-align: center;
-  cursor: pointer;
+    font-size: 2.4rem;
+    padding: 2rem 0;
+    width: 30rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: rgb(28, 26, 26);
+    background: linear-gradient(90deg, rgb(18, 92, 255) 0%, rgb(0, 102, 255) 100%);
+    border-radius: 4px;
 }
 
-button[disabled] {
-  cursor: default;
-  background: #c0c7cf;
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(8, 114, 244, 0.6);
+    transition: transform 150ms;
+    transform: scale(1.03);
 }
 
-.float-right {
-  float: right;
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
 }
 
-#password {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  display: block;
-  width: 100%;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 85px;
-  font-size: 1.2rem;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
-  border-radius: 6px;
-  resize: none;
-  overflow: hidden;
+#highscore-btn {
+    background: linear-gradient(90deg, rgb(255, 9, 9) 0%, rgb(240, 6, 6) 100%);
 }
 
-@media (max-width: 690px) {
-  .btn {
-    font-size: 1rem;
-    margin: 16px 0px 0px 0px;
-    padding: 10px 15px;
-  }
-
-  #password {
-    font-size: 1rem;
-  }
+#highscore-btn:hover {
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(255, 0, 0, 0.5)
 }
 
-@media (max-width: 500px) {
-  .btn {
-    font-size: 0.8rem;
-  }
+.fa-crown {
+    font-size: 2.5rem;
+    margin-left: 1rem;
 }
+
+/* End Page CSS */
+.end-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+}
+
+input {
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border: none;
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+#username {
+    margin-bottom: 3rem;
+    width: 100%;
+    outline: none;
+}
+
+#end-text {
+    font-size: 2.4rem;
+    color: #fff;
+    text-align: center;
+}
+
+#saveScoreBtn {
+    border: none;
+}
+
+.fa-home {
+    margin-left: 1rem;
+    font-size: 2rem;
+    color: rgb(28, 26, 26)
+}
+
+/* Highscores CSS */
+body {
+    color: #fff;
+}
+
+#highScoresList {
+    list-style: none;
+    margin-bottom: 4rem;
+}
+
+.high-score {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+
+/* game CSS  */
+body {
+    color: #fff;
+}
+
+.choice-container {
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 4px;
+    background: rgb(18, 93, 255);
+    font-size: 3rem;
+    min-width: 80rem;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
+    transform: scale(1.02);
+    transform: transform 100ms;
+}
+
+.choice-prefix {
+    padding: 2rem 2.5rem;
+    color: white;
+}
+
+.choice-text {
+    padding: 2rem;
+    width: 100%;
+}
+
+.correct {
+    background: linear-gradient(32deg, rgba(11, 223, 36) 0%, rgb(41, 232, 111) 100%);
+}
+
+.incorrect {
+    background: linear-gradient(32deg, rgba(230, 29, 29, 1) 0%, rgb(224, 11, 11, 1) 100%);
+}
+
+    /* Heads up Display */
+    #hud {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hud-prefix {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .hud-main-text {
+        text-align: center;
+    }
+
+    #progressBar {
+        width: 20rem;
+        height: 3rem;
+        border: 0.2rem solid rgb(11,223,36);
+        margin-top: 2rem;
+        border-radius: 50px;
+        overflow: hidden;
+    }
+
+    #progressBarFull {
+        height: 100%;
+        background: rgb(11,223,36);
+        width: 0%;
+    }
+
+    @media screen and (max-width: 768px) {
+        .choice-container {
+            min-width: 40rem;
+        }
+    }
