@@ -27,7 +27,7 @@ To view my repository, check out [My repository](https://github.com/figfacts/NBA
 ## Mock-Up
 
 The following image shows the web application's appearance and functionality:
-![The NBA Quiz application displays a blue button to "Start Quiz".](./assets/C:\Users\NateRobinsonNBA\bootcamp\homework\NBA-Quiz\assets\04-web-apis-homework-demo.gif)
+![The NBA Quiz application displays a blue button to "Start Quiz".](./assets/04-web-apis-homework-demo.gif)
 
 
 ## Credits
