@@ -3,10 +3,13 @@ const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
+const timeText = document.querySelector('#time'); //added time 
 
 let currentQuestion = {}
 let acceptingAnswers = true
 let score = 0
+// Added time 
+let time = 60
 let questionCounter = 0
 let availableQuestions = []
 
@@ -49,16 +52,19 @@ let questions = [
 
 const SCORE_POINTS = 100
 const MAX_QUESTIONS = 4
+const TIME_SUBTRACTED = -10
 
 startGame = () => {
     questionCounter = 0
     score = 0
+    // added time for 60 seconds
+    time = 60
     availableQuestions = [...questions]
     getNewQuestion()
 }
 
 getNewQuestion = () => {
-    if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
+    if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS || time === 0) { // added time
         localStorage.setItem('mostRecentScore', score)
 
         return window.location.assign('./end.html')
@@ -95,6 +101,9 @@ choices.forEach(choice => {
         if(classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
         }
+        // else (classToApply === 'incorrect') {
+        //     decrementTimer(TIME_SUBTRACTED)
+        // }
 
         selectedChoice.parentElement.classList.add(classToApply)
 
@@ -110,5 +119,12 @@ incrementScore = num => {
     score +=num
     scoreText.innerText = score
 }
+
+// adde
+// decrementTimer = num => {
+//     score +=num
+//     timeText.innerText = time
+// }
+
 
 startGame()

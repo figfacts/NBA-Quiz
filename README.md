@@ -3,21 +3,7 @@
 
 ## Description 
 
-The goal of this project was to create a coding quiz with a timer. When a question is answered incorrectly, then the timer goes down 10 seconds. At the end, the users can save their initials with their total score. 
-
-
-<!-- Delete Criteria once completed
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and my score -->
+The goal of this project was to create a coding quiz with questions, score, and a timer. When a question is answered incorrectly, then the timer is supposed to go down 10 seconds. At the end, the users can save their name with their total score. 
 
 
 # Links
@@ -31,7 +17,8 @@ The following image shows the web application's appearance and functionality:
 
 
 ## Credits
-<!-- Thank you to [insert credit], as I referenced their videos to help create my password generator. To view their channel, check out [ YouTube Channel](https://www.youtube.com/channel/insert). -->
+Thank you to Web Dev Simplified, as I referenced their videos to help create my password generator. To view their channel, check out [Web Dev Simplified YouTube Channel](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw).
+
 
 
 ## License
